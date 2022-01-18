@@ -1,0 +1,43 @@
+/* the body of the app*/
+body{
+    margin: 0; /*removing default space browser puts in*/
+    background: lightseagreen; /* you can also do which is default green color #009578;*/
+}
+/* app id */
+#app{
+    display: grid; /*to place and position all of the sticky notes */
+    grid-template-columns: repeat(auto-fill, 200px) ; /*defines how colns for grid will be positioned*/
+    padding: 24px;
+    gap:24px;
+}
+
+/* note class */
+.note{
+    height: 200px;  /*to make sure grid width is same for perfectly sized sticky notes */
+    box-sizing: border-box;  /*to ensure padding doesnt increase the width & height of sticky note*/
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.15); /* 15% opaque box shadow*/
+    resize: none; /* to remove default resizable box*/
+    font-family: "Adobe Hebrew";
+    font-size: 16px;
+}
+
+/* add-note class*/
+.add-note{
+    height: 200px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);  /* 10% opaque background to allow bkgrd color of whole page to seap through button*/
+    border-radius: 10px;
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition:background 0.2s; /* gives a smooth fade b/w 2 diff bkgrd levels for hover and this one*/
+}
+
+/*effect for when a user hovers over a button*/
+.add-note:hover{
+    background: rgba(0, 0, 0, 0.2);
+}
